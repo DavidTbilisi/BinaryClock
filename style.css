@@ -44,3 +44,25 @@ body {
     cursor: cell
   }
 }
+
+#binary-only{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+  div {
+    border: 1px solid var(--islamic-green);
+    min-width: 100px;
+    min-height: 100px;
+    height: 10px;
+    width: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    line-height: 100px;
+    color:var(--malachite);
+  }
+  div.on{
+    background-color: var(--malachite);
+    color: var(--dark-green);
+  }
+}
