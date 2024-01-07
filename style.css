@@ -1,3 +1,46 @@
+/* colors of Matrix movie vars like  Vampire Black,  Dark Green, Islamic green, malachite */
+:root {
+  --vampire-black: #0D0208;
+  --dark-green: #003B00;
+  --islamic-green: #008F11;
+  --malachite: #00FF41;
+}
+
 body {
   font-size: 3rem;
+  background-color: var(--vampire-black);
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  max-width: 800px;
+  max-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 1rem;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 100px;
+  border: 3px solid var(--islamic-green);
+  padding: 10px;
+  div {
+    background-color: var(--dark-green);
+    border: 1px solid var(--islamic-green);
+    color: var(--malachite);
+    transition: all 0.3s ease-in-out;
+    
+  }
+  div:hover {
+    box-shadow: inset 0 0 15px var(--malachite);
+    cursor: cell
+  }
 }
