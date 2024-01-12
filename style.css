@@ -93,3 +93,38 @@ body {
     column-gap: 1px;
   }
 }
+
+/* MEDIA SCREEN FOR MOBILE AND ORIENTATION LANDSCAPE */
+@media screen and (max-width: 700px)  {
+  body {
+    font-size: 1rem;
+  }
+ 
+  #binary-only{
+    --size: 10px;
+    --space: 2px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) var(--space) repeat(2, 1fr) var(--space)  repeat(2, 1fr); 
+    justify-items: center;
+    gap: 1rem;
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 10px 0; 
+    div:not(.space) {
+      span {
+        opacity: 0;
+      }
+      border: 1px solid var(--islamic-green);
+      border-radius: 15px;
+      min-width: 10px;
+      min-height: 10px;
+      height: var(--size);
+      width: var(--size);
+      text-align: center;
+      line-height: var(--size);
+      color:var(--malachite);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
